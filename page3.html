@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="lt"> 
+
+	<head>
+        <meta charset="UTF-8">
+        <title> page3 </title>
+        <meta name="autorius" content="Liveta Kavaliauskaitė">
+        <meta name="aprašymas" content="survey">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+	</head>
+    <body data-page="3">
+        <div class="title">Išsilavinimas</div>
+
+        <div class="container">
+            <form id="page3" action="page4.html">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressbar"></div>
+                </div>
+                <div>
+                    <span>Išsilavinimo lygis</span>
+                    <select name="issilavinimas" required>
+                        <option value="" selected hidden>Pasirinkite išsilavinimo lygį</option>
+                        <option value="pagrindinis">Pagrindinis</option>
+                        <option value="vidurinis">Vidurinis</option>
+                        <option value="koleginis">Aukštasis-koleginis</option>
+                        <option value="universitetinis">Aukštasis-universitetinis</option>
+                        <option value="joks">Išsilavinimo neturiu</option>
+                      </select>
+                </div>
+                <div class="hidden" id="institucijadiv">
+                    <span>Paskutinė baigta mokslo/studijų įstaiga</span>
+                    <input type="text" name="istaiga" placeholder="Įveskite įstaigos pavadinimą">
+                </div>
+                <div class="hidden" id="baigimometaiddiv">
+                    <span>Baigimo metai</span>
+                    <input type="text" name="baigimoMetai" max="2024-12-31" placeholder="Įveskite baigimo metus">
+                </div>
+                <div class="hidden" id="kvalifikacijadiv">
+                    <span>Kvalifikacija</span>
+                    <input type="text" name="kvalifikacija" placeholder="Įveskite specialybės pavadinimą">
+                </div>
+                <div class="hidden" id="mokslolaipsnisdiv">
+                    <span>Išsilavinimo lygis</span>
+                    <select name="moksloLaipsnis">
+                        <option value="" selected hidden>Pasirinkite mokslo laipsnį</option>
+                        <option value="bakalauro">Bakalauro</option>
+                        <option value="magistro">Magistro</option>
+                        <option value="moksluDaktaro">Mokslų daktaro</option>
+                      </select>
+                </div>
+                <div class="button">
+                    <button type="submit">Kitas</button>
+                </div>   
+            </form>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
