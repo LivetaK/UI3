@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="lt"> 
+
+	<head>
+        <meta charset="UTF-8">
+        <title> page2 </title>
+        <meta name="autorius" content="Liveta Kavaliauskaitė">
+        <meta name="aprašymas" content="survey">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+	</head>
+    <body data-page="2">
+        <div class="title">Bendri duomenys</div>
+
+        <div class="container">
+            <form action="page3.html">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressbar"></div>
+                </div>
+                <div>
+                    <span>Lytis</span>
+                    <select name="lytis" required>
+                        <option value="" selected hidden>Pasirinkite savo lytį</option>
+                        <option value="Moteris">Moteris</option>
+                        <option value="Vyras">Vyras</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Gimimo data</span>
+                    <input type="date" name="gimimoData" max="2024-12-04" placeholder="Įveskite savo gimimo datą" required>
+                </div>
+                <div>
+                    <span>Asmens kodas</span>
+                    <input type="text" name="asmensKodas" pattern="[0-9]{11}" title="Netinkama įvestis" placeholder="Įveskite savo asmens kodą" required>
+                </div>
+                
+                <div class="hidden" id="vedybinepadetisdiv">
+                    <span>Vedybinė padėtis</span>
+                    <select name="vedybinePadetis">
+                        <option value="" selected hidden>Pasirinkite vedybinę padėtį</option>
+                        <option value="susituoke">Susituokęs/susituokusi</option>
+                        <option value="nesusituoke">Nesusituokęs/nesusituokusi</option>
+                        <option value="issiskyre">Išsiskyręs/išsiskyrusi</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Kitas</button>
+                </div>  
+            </form>
+            </div>
+            <script src="index.js"></script>
+
+    </body>
+
+</html>
