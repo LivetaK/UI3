@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="lt"> 
+
+	<head>
+        <meta charset="UTF-8">
+        <title> page4 </title>
+        <meta name="autorius" content="Liveta Kavaliauskaitė">
+        <meta name="aprašymas" content="survey">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+	</head>
+    <body data-page="4">
+        <div class="title">Asmeninė informacija</div>
+
+        <div class="container">
+            <form id="page4" action="page5.html">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressbar"></div>
+                </div>
+                <div>
+                    <span>Profesinė padėtis</span>
+                    <div class="checkbox-group" name="profesija">
+                        <label><input type="checkbox" name="profesija[]" value="studijuoja"> Studijuoju</label><br>
+                        <label><input type="checkbox" name="profesija[]" value="dirba"> Dirbu</label><br>
+                        <label><input type="checkbox" name="profesija[]" value="atostogos"> Motinystės/tėvystės atostogose</label><br>
+                        <label><input type="checkbox" name="profesija[]" value="nieko"> Nieko</label>
+                    </div>
+                </div>
+                <!-- STUDIJUOJA PRADZIA -->
+                <div class="hidden" id="studijupakopadiv">
+                    <span>Studijų pakopa</span>
+                    <select name="studijuPakopa" >
+                        <option value="" selected hidden>Pasirinkite studijų pakopą</option>
+                        <option value="pirma">Pirma pakopa - Bakalauro studijos</option>
+                        <option value="antra">Antra pakopa - Magistratūros studijos</option>
+                        <option value="trecia">Trečia pakopa - Dokturantūra</option>
+                    </select>
+                </div>
+                <div class="hidden" id="kursasdiv">
+                    <span>Kursas</span>
+                    <select name="kursas" >
+                        <option value="" selected hidden>Pasirinkite kursą</option>
+                        <option value="pirmas">Pirmas</option>
+                        <option value="antras">Antras</option>
+                        <option value="trecias">Trečias</option>
+                        <option value="ketvirtas">Ketvirtas</option>
+                        <option value="penktas">Penktas</option>
+                        <option value="sestas">Šeštas</option>
+                    </select>
+                </div>
+            
+                <div class="hidden" id="studijuistaigadiv">
+                    <span>Studijų įstaiga</span>
+                    <input type="text" name="studijuIstaiga" placeholder="Įveskite savo studijų įstaigą">
+                </div>
+                <div class="hidden" id="baigimometaidiv">
+                    <span>Tikėtini baigimo metai</span>
+                    <input type="number" name="baigimoMetai" min="2024" max="2100" step="1" placeholder="Įveskite tikėtinus baigimo metus">
+                </div>
+                <!-- STUDIJUOJA PABAIGA -->
+                <!-- DIRBA PRADZIA -->
+                <div class="hidden" id="darboistaigadiv">
+                    <span>Darbo įstaiga</span>
+                    <input type="text" name="darboĮstaiga" placeholder="Įveskite savo darbo įstaigą">
+                </div>
+                <div class="hidden" id="pareigosdiv">
+                    <span>Pareigos</span>
+                    <input type="text" name="pareigos" placeholder="Įveskite savo pareigas">
+                </div>
+                <div class="hidden" id="darbopatirtisdiv">
+                    <span>Darbo patirtis</span>
+                    <input type="number" name="darboPatirtis" min="0" max="100" step="1" placeholder="Kiek metų darbo patirties turite">
+                </div>
+                <div class="hidden" id="darbosritisdiv">
+                    <span>Darbo sritis</span>
+                    <select name="darboSritis" >
+                        <option value="" selected hidden>Pasirinkite savo darbo sritį</option>
+                        <option value="teise">Teisė</option>
+                        <option value="viesasisSektorius">Viešasis sektorius</option>
+                        <option value="sveikatosApsauga">Sveikatos apsauga</option>
+                        <option value="pramoneGamyba">Pramonė/gamyba</option>
+                        <option value="it">IT</option>
+                        <option value="krastoApsauga">Krašto apsauga</option>
+                        <option value="vidausReikaluSistema">Vidaus reikalų sistema</option>
+                        <option value="klientuAptarnavimasIrPaslaugos">Klientų aptarnavimas ir paslaugos</option>
+                        <option value="transportas">Transportas</option>
+                        <option value="kulturaIrPramogos">Kultūra ir pramogos</option>
+                        <option value="svietimasStudijos">Švietimas/studijos</option>
+                    </select>
+                </div>
+                <!-- DIRBA PABAIGA -->
+
+                <!-- ATOSTOGOS PRADZIA -->
+                <div class="hidden" id="atostogupabaigadiv">
+                    <span>Tikėtini motinystės/tevystės atostogų pabaigos metai</span>
+                    <input type="number" name="atostoguPabaiga" min="2024" max="2100" step="1" placeholder="Įveskite metus">
+                </div>
+                <!-- ATOSTOGOS PABAIGA -->
+                <!-- NEDIRBA PRADZIA -->
+                <div class="hidden" id="nedarbasdiv">
+                    <span>Nedarbo priežastis</span>
+                    <input type="text" name="nedarbas" placeholder="Įveskite nedarbo priežastį">
+                </div>
+                <!-- NEDIRBA PABAIGA -->
+                <div class="button">
+                    <button type="submit">Kitas</button>
+                </div>   
+            </form>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
