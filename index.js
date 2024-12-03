@@ -102,10 +102,13 @@ if(form && form.elements["issilavinimas"]){
                 studijuistaigadiv.classList.add("hidden");
                 baigimometaidiv.classList.add("hidden");
             }
+        
 
             let arDirba = Array.from(profesinePadetis).some(
                 (element) => element.checked && element.value === "dirba"
             );
+
+
             if (arDirba) {
                 darboistaigadiv.classList.remove("hidden");
                 pareigosdiv.classList.remove("hidden");
@@ -136,9 +139,25 @@ if(form && form.elements["issilavinimas"]){
             }
         }
 
-        profesinePadetis.forEach((element) =>
-            element.addEventListener("change", profesiniailaukai)
-        );
+        profesinePadetis.forEach((element) => {
+            element.addEventListener("change", (event) => {
+                if (event.target.value === "dirba" && event.target.checked) {
+                    profesinePadetis.forEach((checkbox) => {
+                        if (checkbox.value === "nieko") {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+                if (event.target.value === "nieko" && event.target.checked) {
+                    profesinePadetis.forEach((checkbox) => {
+                        if (checkbox.value === "dirba") {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+                profesiniailaukai();
+            }); 
+        });
 
         profesiniailaukai();
     }
